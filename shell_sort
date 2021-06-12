@@ -1,0 +1,64 @@
+def shellSort(alist):
+    sublistcount = len(alist) // 2
+    while sublistcount > 0:
+
+      for startposition in range(sublistcount):
+        gapInsertionSort(alist,startposition,sublistcount)
+
+      print("Após incrementos de tamanho", sublistcount, "A lista é",alist)
+
+      sublistcount = sublistcount // 2
+
+def gapInsertionSort(alist,start,gap):
+    for i in range(start+gap,len(alist),gap):
+
+        currentvalue = alist[i]
+        position = i
+
+        while position>=gap and alist[position-gap]>currentvalue:
+            alist[position]=alist[position-gap]
+            position = position-gap
+
+        alist[position]=currentvalue
+
+alist = [54,26,93,17,77,31,44,55,20]
+shellSort(alist)
+print(alist)
+
+##############################################################################
+
+def shellSort(arr):
+	gap = len(arr) // 2 # inicia o intervalo
+
+	while gap > 0:
+		i = 0
+		j = gap
+		
+		# verifique a matriz da esquerda para a direita
+		# até o último índice possível de j
+		
+		while j < len(arr):
+	
+			if arr[i] >arr[j]:
+				arr[i],arr[j] = arr[j],arr[i]
+			
+			i += 1
+			j += 1
+		
+		# agora não podemos mais nos mover para a esquerda, então
+		# verifica o elemento do último índice de i em direção ao lado esquerdo da matriz
+		while i - gap != -1:
+
+			if arr[i - gap] > arr[i]:
+				arr[i-gap],arr[i] = arr[i],arr[i-gap]
+			i -= 1
+
+		gap //= 2
+
+
+# entrada
+arr2 = [9,8,3,7,5,6,4,1]
+print("Entrada: ",arr2)
+
+shellSort(arr2)
+print("Ordenada: ",arr2)
