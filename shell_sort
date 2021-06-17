@@ -1,0 +1,71 @@
+#1-Inicializar h
+#2-Divida a lista em sublistas, cada uma do intervalo h
+#3-Agora, use a classificação por inserção para classificar essas sublistas
+#4-Repita as etapas acima até que a lista esteja completamente classificada
+
+#Exemplo Shell Sort: 
+
+def shell_sort(valores):
+	intervalo = len(valores) // 2 # inicia o intervalo
+
+	while intervalo > 0:
+		i = 0
+		j = intervalo
+		
+		# verifica da esquerda para a direita
+		# até o último índice possível de j
+		
+		while j < len(valores):
+	
+			if valores[i] >valores[j]:
+				valores[i],valores[j] = valores[j],valores[i]
+			
+			i += 1
+			j += 1
+		
+		# agora não podemos mais nos mover para a esquerda, então
+		# verifica o elemento do último índice de i em direção ao lado esquerdo
+		while i - intervalo != -1:
+
+			if valores[i - intervalo] > valores[i]:
+				valores[i-intervalo],valores[i] = valores[i],valores[i-intervalo]
+			i -= 1
+
+		intervalo //= 2
+
+
+# entrada
+valores = [5, 4, 3, 2, 1, 6, 0]
+print("Entrada: ",valores)
+
+shell_sort(valores)
+print("\nOrdenada: ",valores)
+
+############################
+#Segundo exemplo Shell Sort: 
+############################
+
+def shell_sort(valores):
+    sub_lista = len(valores) // 2
+    while sub_lista > 0:
+
+        for posicao_inicial in range(sub_lista):
+            intervalo_insertion_sort(valores,posicao_inicial,sub_lista)
+
+        sub_lista = sub_lista // 2
+
+def intervalo_insertion_sort(valores,inicio,intervalo):
+    for i in range(inicio+intervalo,len(valores),intervalo):
+
+        valor_atual = valores[i]
+        posicao = i
+
+        while posicao>=intervalo and valores[posicao-intervalo]>valor_atual:
+            valores[posicao]=valores[posicao-intervalo]
+            posicao = posicao-intervalo
+
+        valores[posicao]=valor_atual
+
+valores = [5, 4, 3, 2, 1, 6, 0]
+shell_sort(valores)
+print(valores)
