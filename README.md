@@ -14,6 +14,8 @@
    O laço interno busca o menor valor, o laço externo posiciona-o conforme esperado e garante qu eo laço externo se repita a quantidade de vezes necessárias para buscar o próximo menor valor até que todos estejam ordenados.  
 
 ### quick_sort --> Algoritmo de ordenação por divisão e conquista 
-   No metodo quick sort, um valor 'pivô' é escolhido como valor inicial para a ordenação (geralmente é escolhido o primeiro ou ultimo valor). A partir dele, os elementos são comparados entre si e irão trocar de lugar até
-   'alcançarem' o pivô, onde serão organizados acima (maior) ou abaixo (menor) do que ele. Após a primeira execução, vão existir duas  partições - os valores menores e os valores maiores do que o pivô (que estará na sua
-   posição correta). Recursivamente, serão escolhidos novos pivôs em ambos os lados até que todos os valores estejam ordenados.
+   No metodo quick sort, um valor 'pivô' é escolhido como valor inicial para a ordenação (geralmente é escolhido o primeiro ou ultimo valor). A partir dele, os elementos são comparados entre si e irão trocar de lugar até 'alcançarem' o pivô, onde serão organizados acima (maior) ou abaixo (menor) do que ele. Após a primeira execução, vão existir duas  partições - os valores menores e os valores maiores do que o pivô (que estará na sua posição correta). Recursivamente, serão escolhidos novos pivôs em ambos os lados até que todos os valores estejam ordenados.
+   
+### Heapsort 
+   É um método de ordenação cujo princípio de funcionamento é o mesmo utilizado para a ordenação por seleção. O heapsort utiliza uma estrutura de dados chamada heap binário para ordenar os elementos à medida que os insere na estrutura. Assim, ao final das inserções, os elementos podem ser sucessivamente removidos da raiz da heap, na ordem desejada.
+   A heap pode ser representada como uma árvore (uma árvore binária com propriedades especiais) ou como um vetor. Para uma ordenação decrescente, deve ser construída uma heap mínima (o menor elemento fica na raiz). Para uma ordenação crescente, deve ser construído uma heap máxima (o maior elemento fica na raiz).
