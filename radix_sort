@@ -1,0 +1,80 @@
+def padronizar(lista):
+    ''' Padroniza todos os elementos da lista para o mesmo número de dígitos,
+    acrescentando zeros a esquerda de todo elemento com número de dígitos
+    menor que d
+    '''
+    n = len(lista)
+    for i in range(n):
+        lista[i] = str(lista[i])
+    d = len(max(lista, key=len))
+    for i in range(n):
+        if(len(lista[i]) < d):
+            lista[i] = lista[i].zfill(d)
+
+    return lista, d
+
+
+def counting_sort(lista_original, digito):
+
+    n = len(lista_original)
+
+    # obtém o maior dígito entre os que estão sendo avaliados:
+    k = 0
+    for i in range(n):
+        if (int(lista_original[i][digito]) > k):
+            k = int(lista_original[i][digito])
+
+    # inicializa o que será a lista ordenada final
+    lista_ordenada = [None] * n
+    # inicializa lista auxiliar com zeros, em que será armazenada a
+    # distribuicao acumulada dos dígitos avaliados:
+    distribuicao = [0] * (k + 1)
+
+    # para o dígito avaliado de cada elemento j:
+    for j in range(n):
+        # incrementa sua frequência e armazena na lista distribuicao:
+        distribuicao[int(lista_original[j][digito])] = \
+            distribuicao[int(lista_original[j][digito])] + 1
+
+    # para cada digito da lista de frequencias, a começar do segundo:
+    for i in range(1, k + 1):
+        # determina sua distribuição de frequência acumulada:
+        distribuicao[i] = distribuicao[i] + distribuicao[i-1]
+
+    # a partir do último elemento da lista original, em direção ao primeiro:
+    for j in (range(n-1, -1, -1)):
+
+        # a posição do elemento na lista ordenada será dada pela posição
+        # do digito avaliado na distribuição de frequência acumulada:
+        lista_ordenada[distribuicao[int(lista_original[j][digito])] - 1] = \
+                lista_original[j]
+
+        # reduz em 1, para o elemento em questão, o valor da frequência
+        # acumulada, para que o próximo elemento com digito avaliado igual,
+        # a ser processado, seja alocado em uma posição imediatamente anterior,
+        # garantindo que o algorítmo seja estável
+        distribuicao[int(lista_original[j][digito])] =\
+            distribuicao[int(lista_original[j][digito])] - 1
+
+    return lista_ordenada
+
+
+def radix_sort_LSD(lista, d):
+
+    # para cada dígito, iniciando do menos significativo, ordena a lista:
+    for digito in range(d - 1, -1, -1):
+
+        lista = counting_sort(lista, digito)
+
+    lista = [int(x) for x in lista]
+
+    return lista
+
+
+if __name__ == "__main__":
+
+    lista = [123,142,87,263,233,14,132]
+
+    lista, d = padronizar(lista)
+
+    print("Lista ordenada:", radix_sort_LSD(lista, d))
