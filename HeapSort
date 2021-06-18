@@ -1,3 +1,4 @@
+##m max para imprimir em ordem crescente
 def max_heapify (A,n,i):
     l = left(i)
     r = right(i)
@@ -18,6 +19,7 @@ def left (i):
 def right (i):
     return 2 * i + 2
 
+##Partindo o pai da última folha até a raiz
 def build_max_heap (A):
     n = len(A)
     for i in range (n,-1,-1):
@@ -25,7 +27,9 @@ def build_max_heap (A):
     for i in range (n-1,0,-1):
         A[0], A[i] = A[i], A[0]
         max_heapify(A,i,0)
+        
 
+##Exemplo
 A=[33,35,42,10,7,8,14,19,48]
 build_max_heap(A)
 print(A)
