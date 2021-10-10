@@ -38,6 +38,17 @@
 
 ### Timsort
 
+### bucket_sort
+   Bucket Sort, é um algoritmo de ordenação que funciona dividindo um vetor em um número finito de baldes. Cada balde é então ordenado individualmente, seja usando um algoritmo de ordenação diferente, ou usando o algoritmo Bucket Sort recursivamente. O Bucket Sort tem complexidade linear Θ(n)  quando o vetor a ser ordenado contém valores que são uniformemente distribuídos.
+
+   Etapas de Funcionamento:
+   
+   Inicialize um vetor de "baldes", inicialmente vazios.
+   Vá para o vetor original, incluindo cada elemento em um balde.
+   Ordene todos os baldes não vazios.
+   Coloque os elementos dos baldes que não estão vazios no vetor original.
+
+
 
 
 
