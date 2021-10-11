@@ -38,6 +38,9 @@
 
 ### Timsort
 
+### Counting Sort
+O algoritmo de ordenação counting, usa hashing e aritmética. Ele funciona da seguinte forma, o algoritmo conta o número de objetos com valores chave distintos e para calcular a posição de cada objeto na sequencia de saída, utiliza aritmética. Podemos considerar que se tem 3 arrays no algoritmo. O primeiro recebe os inputs, e com os valores do primeiro, se faz um tipo de hash que é guardado no segundo array. Nesse segundo array, é feito um calculo aritmético, e o resultado final vai para o ultimo array.   
+
 
 
 
