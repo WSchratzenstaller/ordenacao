@@ -38,8 +38,12 @@
 
 ### Timsort
 
+### Gnome_sort
+   Proposto pelo iraniano Hamid Sarbazi-Azad em 2000. Conhecido como “Stupid sort” por ser um algoritmo com uma logica muito simples. Um alemão chamado de Dick Grune mudou o nome do algoritmo para Gnome Sort em homenagem a um anão de jardim alemão. O Gnome Sort é baseado na técnica usada pelo duende de jardim alemão, basicamente, ele olha o vaso de flor próximo a ele e o anterior, se eles estão na ordem certa ele avança um vaso, caso contrário ele troca os jarros e volta um passo. Condições de parada: se não tem um jarro anterior ao atual, ele avança um passo, se não tem um jarro após o atual, está tudo organizado.
+
 ### Counting Sort
 O algoritmo de ordenação counting, usa hashing e aritmética. Ele funciona da seguinte forma, o algoritmo conta o número de objetos com valores chave distintos e para calcular a posição de cada objeto na sequencia de saída, utiliza aritmética. Podemos considerar que se tem 3 arrays no algoritmo. O primeiro recebe os inputs, e com os valores do primeiro, se faz um tipo de hash que é guardado no segundo array. Nesse segundo array, é feito um calculo aritmético, e o resultado final vai para o ultimo array.   
+
 
 
 
