@@ -11,7 +11,6 @@ def countingSort(valores):
     for i in range(1, 10):
         x[i] += x[i - 1]
 
-
     i = tamanho - 1
     while i >= 0:
         auxiliar[x[valores[i]] - 1] = valores[i]
@@ -21,7 +20,8 @@ def countingSort(valores):
     for i in range(0, tamanho):
         valores[i] = auxiliar[i]
 
+    return valores
 
 valores = [1, 9, 1, 6, 7, 3, 7]
-countingSort(valores)
+valoresOrdenados = countingSort(valores)
 print(valores)
