@@ -38,6 +38,17 @@
 
 ### Timsort
 
+### bucket_sort
+   Bucket Sort, é um algoritmo de ordenação que funciona dividindo um vetor em um número finito de baldes. Cada balde é então ordenado individualmente, seja usando um algoritmo de ordenação diferente, ou usando o algoritmo Bucket Sort recursivamente. O Bucket Sort tem complexidade linear Θ(n)  quando o vetor a ser ordenado contém valores que são uniformemente distribuídos.
+
+   Etapas de Funcionamento:
+   
+   Inicialize um vetor de "baldes", inicialmente vazios.
+   Vá para o vetor original, incluindo cada elemento em um balde.
+   Ordene todos os baldes não vazios.
+   Coloque os elementos dos baldes que não estão vazios no vetor original.
+   By 
+
 ### Gnome_sort
    Proposto pelo iraniano Hamid Sarbazi-Azad em 2000. Conhecido como “Stupid sort” por ser um algoritmo com uma logica muito simples. Um alemão chamado de Dick Grune mudou o nome do algoritmo para Gnome Sort em homenagem a um anão de jardim alemão. O Gnome Sort é baseado na técnica usada pelo duende de jardim alemão, basicamente, ele olha o vaso de flor próximo a ele e o anterior, se eles estão na ordem certa ele avança um vaso, caso contrário ele troca os jarros e volta um passo. Condições de parada: se não tem um jarro anterior ao atual, ele avança um passo, se não tem um jarro após o atual, está tudo organizado.
    By MBY13
@@ -45,6 +56,7 @@
 ### Counting Sort
 O algoritmo de ordenação counting, usa hashing e aritmética. Ele funciona da seguinte forma, o algoritmo conta o número de objetos com valores chave distintos e para calcular a posição de cada objeto na sequencia de saída, utiliza aritmética. Podemos considerar que se tem 3 arrays no algoritmo. O primeiro recebe os inputs, e com os valores do primeiro, se faz um tipo de hash que é guardado no segundo array. Nesse segundo array, é feito um calculo aritmético, e o resultado final vai para o ultimo array.
    By Joaojv007
+
 
 
 
