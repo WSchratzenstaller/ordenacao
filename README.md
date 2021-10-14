@@ -47,7 +47,7 @@
    Vá para o vetor original, incluindo cada elemento em um balde.
    Ordene todos os baldes não vazios.
    Coloque os elementos dos baldes que não estão vazios no vetor original.
-   By 
+   By WgkLink
 
 ### Gnome_sort
    Proposto pelo iraniano Hamid Sarbazi-Azad em 2000. Conhecido como “Stupid sort” por ser um algoritmo com uma logica muito simples. Um alemão chamado de Dick Grune mudou o nome do algoritmo para Gnome Sort em homenagem a um anão de jardim alemão. O Gnome Sort é baseado na técnica usada pelo duende de jardim alemão, basicamente, ele olha o vaso de flor próximo a ele e o anterior, se eles estão na ordem certa ele avança um vaso, caso contrário ele troca os jarros e volta um passo. Condições de parada: se não tem um jarro anterior ao atual, ele avança um passo, se não tem um jarro após o atual, está tudo organizado.
