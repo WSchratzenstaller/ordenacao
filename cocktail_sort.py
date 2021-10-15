@@ -6,7 +6,9 @@ def cocktail_sort(valores):
         #Primeiro laço leva os maiores valores até o fim da lista.
         for i in range(len(valores)-1):
             if valores[i] > valores[i+1]:
-                valores[i], valores[i+1] = valores[i+1], valores[i]
+                auxiliar = valores[i]
+                valores[i] = valores[i+1]
+                valores[i+1] = auxiliar
                 condicao = True
         
         #Se a condição for "False" significa que os valores estão ordenados.
@@ -17,7 +19,9 @@ def cocktail_sort(valores):
         #Segundo laço leva os menores valores até o início da lista.
         for j in range(len(valores)-2, 0, -1):
             if valores[j] < valores[j-1]:
-                valores[j], valores[j-1] = valores[j-1], valores[j]
+                auxiliar = valores[j]
+                valores[j] = valores[j-1]
+                valores[j-1] = auxiliar
                 condicao = True
 
 #exemplo
