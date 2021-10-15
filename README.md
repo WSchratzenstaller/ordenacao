@@ -57,6 +57,12 @@
 O algoritmo de ordenação counting, usa hashing e aritmética. Ele funciona da seguinte forma, o algoritmo conta o número de objetos com valores chave distintos e para calcular a posição de cada objeto na sequencia de saída, utiliza aritmética. Podemos considerar que se tem 3 arrays no algoritmo. O primeiro recebe os inputs, e com os valores do primeiro, se faz um tipo de hash que é guardado no segundo array. Nesse segundo array, é feito um calculo aritmético, e o resultado final vai para o ultimo array.
    By Joaojv007
 
+### Cocktail_sort
+O algoritmo de ordenação de Cocktail sort tem o seu funcionamento parecido com o algoritmo bubble sort, porém existem dois laços externos: o primeiro percorre uma lista no sentido direito levando os maiores valores para as posições finais e o outro retorna para o lado esquerdo levando os menores valores para as posições iniciais. 
+Os laços externos se comutam, ou seja, ora o maior valor é levado para as últimas posições, ora o menor valor é levado até as posições iniciais. Se não houverem mais trocas, a variável de controle encerra os laços.
+   By getfelipe
+
+
 
 
 
