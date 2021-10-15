@@ -57,6 +57,8 @@
 O algoritmo de ordenação counting, usa hashing e aritmética. Ele funciona da seguinte forma, o algoritmo conta o número de objetos com valores chave distintos e para calcular a posição de cada objeto na sequencia de saída, utiliza aritmética. Podemos considerar que se tem 3 arrays no algoritmo. O primeiro recebe os inputs, e com os valores do primeiro, se faz um tipo de hash que é guardado no segundo array. Nesse segundo array, é feito um calculo aritmético, e o resultado final vai para o ultimo array.
    By Joaojv007
 
+### Comb Sort
+O Comb Sort é semelhante ao Bubble Sort, em que repete pela lista várias vezes, trocando elementos que estão fora de ordem à medida que avança. A diferença é que o Comb Sort não começa olhando para os elementos adjacentes, mas em vez disso, olha para os elementos separados por um certo número de índices, chamado de gap (intervalo). O gap é definido como (n / c), onde n é o número de elementos e c é o fator de encolhimento, que normalmente é definido como 1,3. O número é dividido por c após cada repetição até que o algoritmo esteja olhando para os elementos adjacentes onde o gap será 1.
 
 
 
